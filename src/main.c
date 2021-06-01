@@ -141,8 +141,7 @@ static void activate(GtkApplication *app, gpointer user_data){
 																		"/fr/emersion/Mako",
 																		"fr.emersion.Mako",
 																		NULL, NULL);
-		if(dbusProxy != NULL){
-			check_notifications(dbusProxy);
+		if(check_notifications(dbusProxy) == TRUE){
 			g_timeout_add_seconds(5, G_SOURCE_FUNC(check_notifications), dbusProxy);
 		} else {
 			g_warning("No connection to Mako established.\n");

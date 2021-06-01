@@ -54,6 +54,12 @@ void check_shiftlock(GtkEventControllerKey* controller, GdkEvent* event, GtkWidg
 //function to check for notifications
 gboolean check_notifications(GDBusProxy* dbusProxy){
 	GVariant* callVariant = g_dbus_proxy_call_sync(dbusProxy, "ListNotifications", NULL, G_DBUS_CALL_FLAGS_NONE, -1, NULL, NULL);
+	
+	//check if mako is providing the notification daemon, if not return false
+	if (callVariant == NULL){
+		return(FALSE);
+	}
+	
 	GVariantIter *iter;
 	g_variant_get(callVariant, "(aa{sv})", &iter);
 	int counter = 0;
