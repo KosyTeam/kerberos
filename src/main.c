@@ -161,7 +161,7 @@ static void activate(GtkApplication *app, gpointer user_data){
 		gtk_layer_set_anchor((GtkWindow*) lockerWindow, GTK_LAYER_SHELL_EDGE_LEFT, TRUE);
 		gtk_layer_set_anchor((GtkWindow*) lockerWindow, GTK_LAYER_SHELL_EDGE_BOTTOM, TRUE);
 		gtk_layer_set_anchor((GtkWindow*) lockerWindow, GTK_LAYER_SHELL_EDGE_RIGHT, TRUE);
-		//gtk_layer_set_keyboard_interactivity((GtkWindow*) lockerWindow, TRUE);
+		gtk_layer_set_keyboard_interactivity((GtkWindow*) lockerWindow, TRUE);
 		
 		//call the input inhibiter
 		inhibit_input();
