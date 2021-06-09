@@ -1,6 +1,6 @@
 #Flags & Co.
 CC = gcc
-PKGFLAGS = $(shell pkg-config --libs --cflags glib-2.0 gtk4 wayland-client)
+PKGFLAGS = $(shell pkg-config --libs --cflags glib-2.0 gtk4 wayland-client gtk-layer-shell-0)
 CFLAGS = -Wall -rdynamic -lpam -lpam_misc
 SOURCES = src/main.c src/actions.c src/wlrp-handler.c src/input-inhibitor.c pgresources.c
 PREFIX = /usr/local

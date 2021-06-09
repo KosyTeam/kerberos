@@ -4,6 +4,7 @@
 #include <glib/gi18n.h>
 #include <locale.h>
 #include "gtk/gtk.h"
+#include <gtk-layer-shell.h>
 #include "main.h"
 #include "actions.h"
 #include "wlrp-handler.h"
@@ -56,6 +57,8 @@ static void activate(GtkApplication *app, gpointer user_data){
 		notifyLabel = (GtkWidget*) gtk_builder_get_object(builder, "notifyLabel");
 		GtkWidget* mPopover = (GtkWidget*) gtk_menu_button_get_popover((GtkMenuButton*) gtk_builder_get_object(builder, "menuButton1"));
 		
+		//init layer shell
+		gtk_layer_init_for_window((GtkWindow*) lockerWindow);
 
 		//load settings
 		settings = g_settings_new("eu.kosy.Kerberos");
@@ -152,7 +155,13 @@ static void activate(GtkApplication *app, gpointer user_data){
 		gtk_window_set_application(GTK_WINDOW(lockerWindow), app);
 		gtk_window_present((GtkWindow*) lockerWindow);
 		
-		gtk_window_fullscreen((GtkWindow*) lockerWindow); //TODO should use layer-shell (as soon as Gtk4 is supported)
+		//set up of layer shell
+		gtk_layer_set_layer((GtkWindow*) lockerWindow, GTK_LAYER_SHELL_LAYER_OVERLAY);
+		gtk_layer_set_anchor((GtkWindow*) lockerWindow, GTK_LAYER_SHELL_EDGE_TOP, TRUE);
+		gtk_layer_set_anchor((GtkWindow*) lockerWindow, GTK_LAYER_SHELL_EDGE_LEFT, TRUE);
+		gtk_layer_set_anchor((GtkWindow*) lockerWindow, GTK_LAYER_SHELL_EDGE_BOTTOM, TRUE);
+		gtk_layer_set_anchor((GtkWindow*) lockerWindow, GTK_LAYER_SHELL_EDGE_RIGHT, TRUE);
+		//gtk_layer_set_keyboard_interactivity((GtkWindow*) lockerWindow, TRUE);
 		
 		//call the input inhibiter
 		inhibit_input();
