@@ -13,7 +13,7 @@ Kerberos is a simple GTK 4 based lock screen for Wayland compositors. It is test
 
 [![Preview image with link to video](https://raw.githubusercontent.com/KosyTeam/kerberos/master/preview.png "Click to see video")](https://tube.odat.xyz/videos/watch/bae82edf-c454-4f10-9fd1-856e7fd7b3c0?autoplay=1&muted=1)
 
-It provides a simple screen shield with a login prompt and allows a custom background image and a few other settings. There is also a possibility to use you on CSS themes for your personal experience.
+It provides a simple screen shield with a login prompt and allows a custom background image and a few other settings. There is also a possibility to use your own CSS themes for your personal experience.
 
 ### Installing
 At the moment there are no available packages for Kerberos. If you want to install it check the instructions for an installation from the source code.
