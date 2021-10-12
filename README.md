@@ -9,6 +9,8 @@
 
 > :warning: **Warning**: This software is still in a development statues. Use on productive systems is not recommended. There might be major safety and stability problems. Multi monitors systems aren't supported at all.
 
+> :mailbox: **Information**: Despite few commits Kerberos is activly maintained but there won't be mayor upgrades as long as [#1](https://github.com/KosyTeam/kerberos/issues/1) is not solvable. This is [depending](https://gitlab.gnome.org/GNOME/gtk/-/issues/2132) on Gtk developments.
+
 Kerberos is a simple GTK 4 based lock screen for Wayland compositors. It is tested on [Wayfire](https://wayfire.org/) but should work on similar system as well (check dependencies).
 
 [![Preview image with link to video](https://raw.githubusercontent.com/KosyTeam/kerberos/master/preview.png "Click to see video")](https://tube.odat.xyz/videos/watch/bae82edf-c454-4f10-9fd1-856e7fd7b3c0?autoplay=1&muted=1)
