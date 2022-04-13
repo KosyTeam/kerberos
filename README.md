@@ -1,7 +1,7 @@
 <sup>Internally known as eu.kosy.Kerberos</sup>
 # Kerberos (Kosy Lock screen)
 
-![Status](https://img.shields.io/badge/⚒_status-active-blue?style=flat-square)
+![Status](https://img.shields.io/badge/%E2%9A%92_status-maintained-yellow?style=flat-square)
 ![GitHub](https://img.shields.io/github/license/kosyteam/kerberos?style=flat-square&label=►license)
 [![Matrix](https://img.shields.io/matrix/kosyteam:tchncs.de?logo=matrix&server_fqdn=tchncs.de&style=flat-square)](https://matrix.to/#/#kosyteam:tchncs.de)
 [![Liberapay receiving](https://img.shields.io/liberapay/receives/mfxbe?logo=liberapay&style=flat-square)](https://liberapay.com/mfxbe/donate)
